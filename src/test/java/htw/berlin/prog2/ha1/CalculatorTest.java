@@ -92,7 +92,7 @@ class CalculatorTest {
     //TODO hier weitere Tests erstellen
 
     @Test
-    @DisplayName("should display result after adding two negative multi-digit numbers")
+    @DisplayName("should display result after multiplying two positive multi-digit numbers")
     void testPositiveMultiplication() {
         Calculator calc = new Calculator();
 
