@@ -96,18 +96,31 @@ class CalculatorTest {
     void testPositiveMultiplication() {
         Calculator calc = new Calculator();
 
-
-
-
         calc.pressDigitKey(3);
         calc.pressBinaryOperationKey("x");
         calc.pressDigitKey(5);
         calc.pressEqualsKey();
 
-
         String expected = "15";
         String actual = calc.readScreen();
 
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    @DisplayName("should display result after adding two negative multi-digit numbers")
+    void testNegativeAddition() {
+        Calculator calc = new Calculator();
+
+        calc.pressNegativeKey();
+        calc.pressDigitKey(3);
+        calc.pressBinaryOperationKey("+");
+        calc.pressNegativeKey();
+        calc.pressDigitKey(5);
+        calc.pressEqualsKey();
+
+        String expected = "-8";
+        String actual = calc.readScreen();
 
         assertEquals(expected, actual);
     }
