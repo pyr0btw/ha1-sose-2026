@@ -140,7 +140,7 @@ class CalculatorTest {
     }
 
     @Test
-    @DisplayName("should display result after adding two positive multi-digit numbers")
+    @DisplayName("should display result after adding two positive multi-digit numbers twice")
     void testTwoPositiveAddition() {
         Calculator calc = new Calculator();
 
