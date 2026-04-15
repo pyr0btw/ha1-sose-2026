@@ -87,7 +87,7 @@ public class Calculator {
             default -> throw new IllegalArgumentException();
         };
         screen = Double.toString(result);
-        if (Double.isNaN(result)){
+        if(screen.equals("NaN")){
             screen = "Error";
         } else if (result == (int) result){
             screen = String.valueOf((int) result);
